@@ -1,0 +1,59 @@
+@import '@styles/styles';
+
+.toggle-control {
+  display: flex;
+  position: relative;
+  // padding-left: 100px;
+  padding-left: 40px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  // font-size: 18px;
+  // -webkit-user-select: none;
+  //    -moz-user-select: none;
+  //     -ms-user-select: none;
+  //         user-select: none;
+}
+
+.toggle-control input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.toggle-control input:checked ~ .control {
+  background-color: $color-primary;
+}
+.toggle-control input:checked ~ .control:after {
+  background-color: white;
+  // left: 37px;
+  left: 12px;
+}
+.toggle-control .control {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 28px;
+  // height: 35px;
+  // width: 70px;
+  border-radius: 25px;
+  background-color: white;
+  -webkit-transition: background-color 0.15s ease-in;
+  transition: background-color 0.15s ease-in;
+}
+
+.toggle-control .control:after {
+  content: "";
+  position: absolute;
+  // left: 3px;
+  // top: 2.5px;
+  left: 2px;
+  top: 1px;
+  width: 14px;
+  height: 14px;
+  border-radius: 25px;
+  background: gray;
+  -webkit-transition: left 0.15s ease-in;
+  transition: left 0.15s ease-in;
+}

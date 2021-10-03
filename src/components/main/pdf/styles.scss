@@ -1,0 +1,16 @@
+@import '@styles/styles';
+
+.wrap-pdf {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  max-width: 900px;
+  background-color: $color-background;
+  background-clip: border-box;
+  
+  color: $color-white;
+  border-radius: .3rem;
+  margin: 1.75rem auto;
+  padding: 10px;
+}

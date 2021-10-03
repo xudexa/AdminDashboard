@@ -1,0 +1,124 @@
+@import '@styles/styles';
+
+
+.wrap-prepend {
+  width: 100%;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.wrap-input-prepend {
+  width: 100%;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -ms-flex-align: stretch;
+  align-items: stretch;
+}
+.wrap-input-prepend:focus-within {
+  border-radius: .25rem;
+  box-shadow: 0 0 0 0.2rem rgba($color-primary,.55);
+}
+
+.prepend-input {
+  display: flex;
+  margin-right: -1px;
+}
+
+.input-prepend-icon {
+  margin-right: -1px;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  padding: .375rem .75rem;
+  margin-bottom: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: $color-white;
+  text-align: center;
+  white-space: nowrap;
+  background-color: $color-primary;
+  border: 1px solid $color-primary;
+  border-radius: .25rem 0 0 .25rem;  
+  border: 2px solid $color-primary;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+
+.input-control-prepend {  
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  height: calc(1.5em + .75rem + 2px);
+  padding: .375rem .75rem;
+  color: $color-background;
+  background-color: $color-white;
+  background-clip: padding-box;
+  border-radius: 0 .25rem .25rem 0;
+  border: 2px solid $color-primary;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.input-control-prepend:-webkit-autofill {  
+  -webkit-text-fill-color: $color-background;
+  -webkit-box-shadow: 0 0 0px 1000px $color-white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.input-control-prepend.error,
+.input-control-prepend.error:focus {  
+  border: 2px solid red;  
+}
+
+.focus-input-prepend {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.focus-input-prepend::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.wrap-input-prepend:focus { 
+  background-color: $color-white;
+  border-color: $color-primary;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba($color-primary,.55);
+}
+
+small {
+  font-size: 80%;
+  font-weight: 400;
+  
+}
+
+.prepend-text {  
+  display: block;
+  position: relative;
+  margin-top: .35rem;
+  color: $color-transparent;
+}
+
+.text-error {
+  color: red;
+}

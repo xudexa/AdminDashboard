@@ -1,0 +1,27 @@
+@import '@styles/styles';
+
+.footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  color: $color-athens-gray;
+  background-color: $color-background;
+  box-shadow: 0 -4px 8px 0 rgba(50, 50, 50, 0.2), 0 -2px 2px 0 rgba(50, 50, 50, 0.19);
+
+  &__copyright {
+    font-size: 20px;
+    color: $color-primary;
+  }
+
+  &__icon {
+    color: $color-cinnabar;
+  }
+
+  &__signature {
+    color: $color-primary;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}

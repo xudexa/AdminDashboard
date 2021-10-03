@@ -1,0 +1,48 @@
+@import '@styles/styles';
+
+.grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: 100%; // Charts responsiveness won't work with fr units
+  grid-template-rows: $height-header 1fr $height-footer;
+  grid-template-areas:
+    'header'
+    'main'
+    'footer';
+  height: 100vh;
+  overflow-x: hidden; // Prevent overflow scroll from hidden sidenav
+
+  &--noscroll {
+    overflow-y: hidden;
+  }
+}
+
+.main {
+  grid-area: main;
+  background-color: $color-background;
+  
+}
+
+// Mobile screen breakpoints (750px)
+@media only screen and (min-width: 46.875em) {
+  // Break out to sidenav grid layout on medium + screens
+  .grid {
+    display: grid;
+    grid-template-columns: $width-sidenav calc(100% - 240px); // Charts responsiveness won't work with fr units
+    grid-template-rows: $height-header 1fr $height-footer;
+    grid-template-areas:
+      'sidenav header'
+      'sidenav main'
+      'sidenav footer';
+    height: 100vh;
+  }
+}
+
+// Medium screens breakpoint (1050px)
+@media only screen and (min-width: 65.625em) {
+  .main {
+    &__cards {
+      column-count: 2;
+    }
+  }
+}

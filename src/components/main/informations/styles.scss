@@ -1,0 +1,83 @@
+@import '@styles/styles';
+
+.main-informations {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 180px;
+  color: $color-mischka;
+  background-size: cover;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1609106/lake-shadow-water.jpg");
+  margin-bottom: 20px;
+
+  &__intro-wrapper {
+    display: flex;
+    flex: 1;
+    flex-direction: column; // Mobile-first; break out to row on medium + screens
+    align-items: center;
+    justify-content: space-between;
+    height: 180px;
+    padding: 12px 30px;
+    background: rgba(255,255,255,.12);
+    font-size: 26px;
+    letter-spacing: 1px;
+  }
+
+  &__datetime {
+    display: flex;
+    color: $color-mischka;
+    text-shadow: 1px 1px 10px $color-background;
+    flex-direction: column;
+    align-items: center;
+
+    &-date {
+      margin-bottom: 8px;
+      font-size: 22px;
+    }
+
+    &-time {
+      font-size: 18px;
+    }
+  }
+}
+
+// Main header quick view update items
+.quickview {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 60px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &-total {
+      margin-bottom: 2px;
+      font-size: 26px;
+      text-shadow: 1px 1px 10px $color-background;
+    }
+
+    &-description {
+      font-size: 18px;
+      text-align: center;
+      text-shadow: 1px 1px 10px $color-background;
+    }
+  }
+}
+
+// Medium screens breakpoint (1050px)
+@media only screen and (min-width: 65.625em) {
+ 
+  .main-informations {
+    height: 90px;
+    &__intro-wrapper {
+      height: 90px;
+      flex-direction: row;
+    }
+
+    &__welcome {
+      align-items: flex-start;
+    }
+  }
+}

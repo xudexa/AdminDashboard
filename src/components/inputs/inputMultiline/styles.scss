@@ -1,0 +1,76 @@
+@import '@styles/styles';
+
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+select:-webkit-autofill {  
+  -webkit-text-fill-color: $color-background;
+  -webkit-box-shadow: 0 0 0px 1000px $color-white inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
+.wrap-textarea {
+  width: 100%;
+  position: relative;
+  margin-bottom: 12px;
+}
+
+.label-textarea {
+  font-size: 14px;
+  color: $color-white;
+  line-height: 1.2;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.wrap-textarea.required .label-textarea:after {
+  color: red;
+  content: " *";
+  font-size: 14px ;
+}
+
+.textarea-control {  
+  font-family: Arial,sans-serif;
+  font-size: 14px;
+  display: block;
+  width: 100%;
+  min-height: 100px;
+  resize: vertical;
+  padding: .375rem .75rem;
+  color: $color-background;
+  background-color: $color-white;
+  background-clip: padding-box;
+  border-radius: .25rem;
+  border: 2px solid #671411;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.textarea-control.error,
+.textarea-control.error:focus {  
+  border: 2px solid red;  
+}
+
+.textarea-control:focus {
+  color: #495057;
+  background-color: $color-white;
+  border-color: $color-primary;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba($color-primary,.55);
+}
+
+small {
+  font-size: 80%;
+  font-weight: 400;
+  
+}
+
+.form-text {  
+  display: block;
+  position: relative;
+  margin-top: .35rem;
+  color: $color-transparent;
+}
+
+.text-error {
+  color: red;
+}
